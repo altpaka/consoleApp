@@ -3,7 +3,7 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 plugins {
     java
     application
-    kotlin("jvm") version "1.6.10"
+    kotlin("jvm") version "1.6.21"
 }
 
 group = "com.github.Polina3116"
@@ -14,6 +14,7 @@ application {
 }
 dependencies {
     implementation(kotlin("stdlib-jdk8"))
+    testImplementation(kotlin("test"))
 }
 repositories {
     mavenCentral()
