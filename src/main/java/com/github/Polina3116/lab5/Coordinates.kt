@@ -1,11 +1,10 @@
-package com.github.Polina3116.lab5;
-public final class Coordinates {
-    private final Long x; //Поле не может быть null
-    private final float y;
+package com.github.Polina3116.lab5
 
-    public Coordinates(Long x, float y) {
-        this.x = x;
-        this.y = y;
-        if (this.x == null) throw new NullPointerException("x can not be null");
-    }
+import java.lang.NullPointerException
+
+/**
+ * @property x Не может быть null
+ */
+class Coordinates(
+        val x: Long, val y: Float) {
 }

@@ -1,16 +1,14 @@
-package com.github.Polina3116.lab5;
-import static kotlin.text.StringsKt.isBlank;
+package com.github.Polina3116.lab5
 
-public final class Location {
-    private final double x;
-    private final Float y; //Поле не может быть null
-    private final String name; //Строка не может быть пустой, Поле может быть null
+import kotlin.text.isBlank
+import java.lang.NullPointerException
+import java.lang.IllegalArgumentException
 
-    public Location(double x, Float y, String name) {
-        this.x = x;
-        this.y = y;
-        this.name = name;
-        if (this.y == null) throw new NullPointerException("y can not be null");
-        if (this.name != null && isBlank(this.name)) throw new IllegalArgumentException("name can not be empty");
+class Location(private val x: Double, //Поле не может быть null
+               private val y: Float?, //Строка не может быть пустой, Поле может быть null
+               private val name: String?) {
+    init {
+        if (y == null) throw NullPointerException("y can not be null")
+        require(!(name != null && name.isBlank())) { "name can not be empty" }
     }
 }

@@ -1,0 +1,4 @@
+package commands
+
+interface BoundCommand {
+}

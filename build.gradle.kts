@@ -4,6 +4,7 @@ plugins {
     java
     application
     kotlin("jvm") version "1.6.21"
+    kotlin("plugin.serialization") version "1.6.21"
 }
 
 group = "com.github.Polina3116"
@@ -15,6 +16,8 @@ application {
 dependencies {
     implementation(kotlin("stdlib-jdk8"))
     testImplementation(kotlin("test"))
+    implementation("org.jetbrains.kotlinx:kotlinx-serialization-core:1.3.3")
+    implementation("org.jetbrains.kotlinx:kotlinx-datetime:0.3.2")
 }
 repositories {
     mavenCentral()
