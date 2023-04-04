@@ -1,28 +1,18 @@
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
-    java
-    application
-    kotlin("jvm") version "1.6.21"
-    kotlin("plugin.serialization") version "1.6.21"
+    kotlin("jvm") version "1.6.21" apply false
+    kotlin("plugin.serialization") version "1.6.21" apply false
 }
 
-group = "com.github.Polina3116"
+group = "com.github.altpaka"
 version = "1.0"
 
-application {
-    mainClass.set("Main")
-}
-dependencies {
-    implementation(kotlin("stdlib-jdk8"))
-    testImplementation(kotlin("test"))
-    implementation("org.jetbrains.kotlinx:kotlinx-serialization-core:1.3.3")
-    implementation("org.jetbrains.kotlinx:kotlinx-datetime:0.3.2")
-}
 repositories {
     mavenCentral()
-    maven(url = "https://jitpack.io")
+    maven(url = "https://s01.oss.sonatype.org/content/repositories/snapshots/")
 }
+/*
 val compileKotlin: KotlinCompile by tasks
 compileKotlin.kotlinOptions {
     jvmTarget = "1.8"
@@ -42,3 +32,5 @@ val fatJar = tasks.create<Jar>("fatJar") {
 }
 
 tasks["build"].dependsOn(fatJar)
+
+ */
